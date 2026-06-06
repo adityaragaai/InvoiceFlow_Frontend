@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  .dark {
+    color-scheme: dark;
+  }
+
+  html {
+    font-feature-settings: 'cv11', 'ss01';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans;
+  }
+  .dark body {
+    @apply bg-[#070b14] text-slate-100;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { @apply bg-slate-200 dark:bg-slate-700 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-slate-300 dark:bg-slate-600; }
+
+  * { @apply transition-colors duration-0; }
+}
+
+@layer components {
+  /* ─── Buttons ─────────────────────────────────────────────── */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl font-medium text-sm
+           transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed select-none whitespace-nowrap;
+  }
+  .btn-primary {
+    @apply btn text-white focus:ring-blue-500 focus:ring-offset-white dark:focus:ring-offset-slate-900;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25);
+  }
+  .btn-primary:hover { background: linear-gradient(135deg, #1d4ed8, #2563eb); }
+  .btn-secondary {
+    @apply btn bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 hover:border-slate-300
+           focus:ring-slate-400 dark:bg-slate-800 dark:text-slate-200 dark:border-slate-700
+           dark:hover:bg-slate-700/70;
+  }
+  .btn-danger {
+    @apply btn text-white focus:ring-red-500;
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+  }
+  .btn-danger:hover { background: linear-gradient(135deg, #b91c1c, #dc2626); }
+  .btn-ghost {
+    @apply btn text-slate-600 hover:bg-slate-100 hover:text-slate-900 focus:ring-slate-300
+           dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200;
+  }
+
+  /* ─── Cards ───────────────────────────────────────────────── */
+  .card {
+    @apply bg-white rounded-2xl border border-slate-200 dark:bg-slate-900 dark:border-slate-800;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);
+  }
+  .card-interactive {
+    @apply card transition-all duration-300 ease-out cursor-pointer hover:-translate-y-px;
+  }
+  .card-interactive:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.06);
+  }
+
+  /* ─── Inputs ──────────────────────────────────────────────── */
+  .input {
+    @apply block w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5
+           text-sm text-slate-900 placeholder-slate-400
+           focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500
+           transition-all duration-200
+           dark:bg-slate-900 dark:border-slate-700 dark:text-slate-100
+           dark:placeholder-slate-500 dark:focus:ring-blue-500/30 dark:focus:border-blue-500;
+  }
+  .label {
+    @apply block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5;
+  }
+
+  /* ─── Shimmer skeleton ────────────────────────────────────── */
+  .shimmer {
+    @apply rounded-lg bg-slate-100 dark:bg-slate-800 overflow-hidden relative;
+  }
+  .shimmer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.55) 50%,
+      transparent 100%
+    );
+    background-size: 800px 100%;
+    animation: shimmer 1.6s infinite linear;
+  }
+  .dark .shimmer::after {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.04) 50%,
+      transparent 100%
+    );
+    background-size: 800px 100%;
+  }
+
+  /* ─── Glass morphism ──────────────────────────────────────── */
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border-slate-200/70
+           dark:bg-slate-900/80 dark:border-slate-800/70;
+  }
+
+  /* ─── Badge ───────────────────────────────────────────────── */
+  .status-badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold border;
+  }
+
+  /* ─── Gradient text ───────────────────────────────────────── */
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+  }
+}
