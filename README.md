@@ -69,19 +69,20 @@ The application was designed with a recruiter-friendly and production-level stan
 <div align="center">
 
 ### 📊 Invoice Dashboard
-![Invoice Dashboard](./screenshots/dashboard.png)
+<img width="1505" height="911" alt="image" src="https://github.com/user-attachments/assets/02a83d0d-d6c3-40cd-8643-a9aec537acc4" />
 
-### 🔍 Filtering & Sorting
-![Filters](./screenshots/filters.png)
 
 ### 📈 Analytics — Top 5 Customers
-![Analytics](./screenshots/analytics.png)
+<img width="1502" height="891" alt="image" src="https://github.com/user-attachments/assets/e274ea90-0242-479a-aae5-86b5cbd1e6b2" />
+
 
 ### 👤 Customer Profile Page
-![Customer Profile](./screenshots/customer-profile.png)
+<img width="1502" height="908" alt="image" src="https://github.com/user-attachments/assets/de32d25f-1ab7-40b8-a921-4c0699929c30" />
+
 
 ### 📝 Invoice Creation Form
-![Invoice Form](./screenshots/invoice-form.png)
+<img width="1477" height="897" alt="image" src="https://github.com/user-attachments/assets/b2123ef1-fac6-4dfa-a514-850bf986dff6" />
+
 
 </div>
 
