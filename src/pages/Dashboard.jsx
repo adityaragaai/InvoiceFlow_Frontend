@@ -92,7 +92,7 @@ export default function Dashboard() {
           {/* Status */}
           <div className="relative">
             <select
-              className="input h-9 pr-8 text-sm appearance-none cursor-pointer"
+              className="input h-9 py-0 pr-8 text-sm appearance-none cursor-pointer"
               value={filters.status}
               onChange={(e) => setFilter('status', e.target.value)}
             >
@@ -105,7 +105,7 @@ export default function Dashboard() {
           {/* Tax rate */}
           <div className="relative">
             <select
-              className="input h-9 pr-8 text-sm appearance-none cursor-pointer"
+              className="input h-9 py-0 pr-8 text-sm appearance-none cursor-pointer"
               value={filters.taxRate}
               onChange={(e) => setFilter('taxRate', e.target.value)}
             >
