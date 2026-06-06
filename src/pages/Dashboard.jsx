@@ -90,7 +90,7 @@ export default function Dashboard() {
           </div>
 
           {/* Status */}
-          <div className="relative">
+          <div className="relative min-w-[120px]">
             <select
               className="input h-9 pr-8 text-sm appearance-none cursor-pointer"
               value={filters.status}
@@ -103,7 +103,7 @@ export default function Dashboard() {
           </div>
 
           {/* Tax rate */}
-          <div className="relative">
+          <div className="relative min-w-[120px]">
             <select
               className="input h-9 pr-8 text-sm appearance-none cursor-pointer"
               value={filters.taxRate}
